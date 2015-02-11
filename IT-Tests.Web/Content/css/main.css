@@ -3,6 +3,10 @@ body {
     background: #e5e5e5;
     color: #999;
 }
+#default-body {
+    background-image: url('../images/default-back.jpg');
+}
+
 h1,
 h2,
 h3,
@@ -325,11 +329,21 @@ textarea#message {
 #categories .row > div {
     margin-bottom: 50px;
 }
+#default-wrapper .container {
+    opacity: 0.9;
+    background-color: whitesmoke;
+    border: 3px solid white;
+    border-radius: 3px 3px;
+    margin-top: 15px;
+    width: 1140px;
+}
 footer{
-    padding-left: 500px;
+    padding-left: 470px;
     padding-top: 20px;
     height: 60px;
     background-color: #333;
+    width: 1135px;
+    margin-left: -15px;
 }
 #copyright{
     color: #999;
