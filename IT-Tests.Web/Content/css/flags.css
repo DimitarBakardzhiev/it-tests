@@ -1,9 +1,9 @@
 .flag {
 	width: 16px;
 	height: 11px;
-	background:url(../images/flags.png) no-repeat;
+	background:url(../images/flags.png) no-repeat; /*make this base64*/
         margin-top: 38px;
 }
 
 .flag.flag-bg {background-position: -16px 0}
-.flag.flag-gb {background-position: 0 -11px; margin-left: 15px;}
+.flag.flag-gb {background-position: 0 -11px; margin-left: 20px;}
