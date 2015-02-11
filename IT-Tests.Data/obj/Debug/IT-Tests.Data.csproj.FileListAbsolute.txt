@@ -1,0 +1,16 @@
+C:\Users\Dimitar\Documents\Github\it-tests\IT-Tests.Data\bin\Debug\IT-Tests.Data.dll
+C:\Users\Dimitar\Documents\Github\it-tests\IT-Tests.Data\bin\Debug\IT-Tests.Data.pdb
+C:\Users\Dimitar\Documents\Github\it-tests\IT-Tests.Data\obj\Debug\IT-Tests.Data.dll
+C:\Users\Dimitar\Documents\Github\it-tests\IT-Tests.Data\obj\Debug\IT-Tests.Data.pdb
+C:\Users\Dimitar\Documents\Github\it-tests\IT-Tests.Data\bin\Debug\IT-Tests.Data.dll.config
+C:\Users\Dimitar\Documents\Github\it-tests\IT-Tests.Data\bin\Debug\EntityFramework.dll
+C:\Users\Dimitar\Documents\Github\it-tests\IT-Tests.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dimitar\Documents\Github\it-tests\IT-Tests.Data\bin\Debug\IT-Tests.Models.dll
+C:\Users\Dimitar\Documents\Github\it-tests\IT-Tests.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Dimitar\Documents\Github\it-tests\IT-Tests.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Dimitar\Documents\Github\it-tests\IT-Tests.Data\bin\Debug\IT-Tests.Models.pdb
+C:\Users\Dimitar\Documents\Github\it-tests\IT-Tests.Data\bin\Debug\EntityFramework.xml
+C:\Users\Dimitar\Documents\Github\it-tests\IT-Tests.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dimitar\Documents\Github\it-tests\IT-Tests.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Dimitar\Documents\Github\it-tests\IT-Tests.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Dimitar\Documents\Github\it-tests\IT-Tests.Data\obj\Debug\IT-Tests.Data.csprojResolveAssemblyReference.cache
