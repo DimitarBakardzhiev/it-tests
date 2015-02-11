@@ -178,6 +178,7 @@
     <Content Include="Content\css\main.css" />
     <Content Include="Content\css\prettyPhoto.css" />
     <Content Include="Content\images\blank.gif" />
+    <Content Include="Content\images\default-back.jpg" />
     <Content Include="Content\images\flags.png" />
     <Content Include="Content\images\ico\favicon.ico" />
     <Content Include="Content\images\logo.png" />
@@ -289,6 +290,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\_ViewStart.cshtml" />
     <Content Include="Views\Home\_IndexLayout.cshtml" />
+    <Content Include="Views\Shared\_NavigationPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
