@@ -348,4 +348,7 @@ footer{
 #copyright{
     color: #999;
 }
+.form-group {
+    margin-bottom: 10px;
+}
 
