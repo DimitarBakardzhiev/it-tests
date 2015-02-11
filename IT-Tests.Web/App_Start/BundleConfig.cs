@@ -10,6 +10,14 @@ namespace IT_Tests.Web
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
+            bundles.Add(new ScriptBundle("~/bundles/js").Include(
+                    "~/Scripts/js/bootstrap.min.js",
+                    "~/Scripts/js/html5shiv.js",
+                    "~/Scripts/js/jquery.isotope.min",
+                    "~/Scripts/js/jquery.js",
+                    "~/Scripts/js/jquery.prettyPhoto.js",
+                    "~/Scripts/js/main.js",
+                    "~/Scripts/js/respond.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -24,8 +32,11 @@ namespace IT_Tests.Web
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/css/bootstrap.min.css",
+                      "~/Content/css/flags.css",
+                      "~/Content/css/font-awesome.min.css",
+                      "~/Content/css/main.css",
+                      "~/Content/css/prettyPhoto.css"));
         }
     }
 }
