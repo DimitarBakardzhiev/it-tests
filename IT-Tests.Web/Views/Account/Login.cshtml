@@ -4,7 +4,7 @@
     ViewBag.Title = "Log in";
 }
 
-<h3>@ViewBag.Title.</h3>
+<h2>@ViewBag.Title.</h2>
 <div class="row">
     <div class="col-md-9">
         <section id="loginForm">
@@ -51,18 +51,8 @@
             }
         </section>
     </div>
-    <div class="col-md-3">
-        <h4>Or login via external account</h4>
-        <hr />
-        <i class="icon-facebook icon-md icon-color3"></i>
-        <i class="icon-google-plus icon-md icon-color1"></i>
-        <i class="icon-twitter icon-md icon-color5"></i>
 
-        <!-- <section id="socialLoginForm">
-            @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
-        </section>
-        -->
-    </div>
+    @Html.Partial("_ExternalLoginsListPartial")
 </div>
 
 @section Scripts {
