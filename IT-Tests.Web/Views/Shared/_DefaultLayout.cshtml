@@ -25,7 +25,6 @@
                     <ul class="nav navbar-nav">
                         <li class="active">
                             @Html.ActionLink(" ", "Index", "Home", routeValues: null, htmlAttributes: new { @class = "icon-home" })
-                           <!-- <a href="#main-slider"><i class="icon-home"></i></a> -->
                         </li>
                         <li><a href="#tests">Tests</a></li>
                         <li><a href="#tutorials">Tutorials</a></li>
@@ -38,19 +37,22 @@
             </div>
         </div>
     </header>
-    <div id="wrapper">
-        @RenderBody()
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+        <div id="wrapper" class="box first">
+            <div class="container">
+                @RenderBody()
+                <footer>
+                    <p id="copyright">&copy; @DateTime.Now.Year - IT-TESTS.NET</p>
+                </footer>
+            </div>
+        </div>
+
     @*<div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>*@
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+        </div>*@
 
     @Scripts.Render("~/bundles/js")
     @RenderSection("scripts", required: false)
