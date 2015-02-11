@@ -417,10 +417,6 @@ textarea#message {
     background-color: #3498db;
     color: #fff;
 }
-.btn-default:hover, .btn-default:active, .btn-default:focus{
-    background-color: #3498db;
-    color: #fff;
-}
 #categories .box {
     padding-bottom: 0;
 }
