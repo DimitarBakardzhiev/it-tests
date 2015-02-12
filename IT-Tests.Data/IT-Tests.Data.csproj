@@ -57,6 +57,10 @@
     <Compile Include="IRepository.cs" />
     <Compile Include="ITTestsData.cs" />
     <Compile Include="ITTestsDbContext.cs" />
+    <Compile Include="Migrations\201502121518499_FirstName.cs" />
+    <Compile Include="Migrations\201502121518499_FirstName.Designer.cs">
+      <DependentUpon>201502121518499_FirstName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -69,6 +73,11 @@
       <Project>{269d5d31-dde6-4ff3-83aa-a45f048b2194}</Project>
       <Name>IT-Tests.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201502121518499_FirstName.resx">
+      <DependentUpon>201502121518499_FirstName.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
