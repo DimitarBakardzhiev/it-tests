@@ -12,8 +12,10 @@
     @Html.Partial("_NavigationPartial")
     <div id="wrapper">
         @RenderBody()
-        <footer>
-            <p id="copyright">&copy; @DateTime.Now.Year - IT-TESTS.NET</p>
+        <footer class="container">
+            <div class="col-md-7 col-md-offset-5">
+                <p id="copyright">&copy; @DateTime.Now.Year - IT-TESTS.NET</p>
+            </div>
         </footer>
     </div>
     @*<div class="container body-content">

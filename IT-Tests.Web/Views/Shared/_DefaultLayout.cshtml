@@ -9,15 +9,25 @@
 
 </head>
 <body data-spy="scroll" data-target="#navbar" data-offset="0" id="default-body">
-   @Html.Partial("_NavigationPartial")
-        <div id="default-wrapper">
-            <div class="container">
-                @RenderBody()
-                <footer>
-                    <p id="copyright">&copy; @DateTime.Now.Year - IT-TESTS.NET</p>
+
+    <div class="row">
+        @Html.Partial("_NavigationPartial")
+    </div>
+    <div id="default-wrapper">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container">
+                    @RenderBody()
+                </div>
+
+                <footer class="container">
+                    <div class="col-md-offset-10 col-md-2">
+                        <p id="copyright">&copy; @DateTime.Now.Year - IT-TESTS.NET</p>
+                    </div>
                 </footer>
             </div>
         </div>
+    </div>
 
     @*<div class="container body-content">
             @RenderBody()
