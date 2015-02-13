@@ -1,6 +1,7 @@
 ﻿namespace IT_Tests.Models
 {
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
 
     public class Question
     {
@@ -11,6 +12,7 @@
 
         public int Id { get; set; }
 
+        [Display(Name="Question Text")]
         public string Text { get; set; }
 
         public int CategoryId { get; set; }
