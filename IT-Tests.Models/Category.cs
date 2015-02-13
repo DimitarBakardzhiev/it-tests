@@ -16,7 +16,9 @@
         public string Name { get; set; }
 
         [Display(Name="Parent Category")]
-        public int? ParentId { get; set; }
+        public int? ParentCategoryId { get; set; }
+
+        public virtual Category ParentCategory { get; set; }
 
         public virtual ICollection<Question> Questions { get; set; }
     }

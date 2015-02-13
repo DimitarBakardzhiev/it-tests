@@ -65,6 +65,10 @@
     <Compile Include="Migrations\201502131842101_Basic DB.Designer.cs">
       <DependentUpon>201502131842101_Basic DB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201502132223368_Category-Self-Relate.cs" />
+    <Compile Include="Migrations\201502132223368_Category-Self-Relate.Designer.cs">
+      <DependentUpon>201502132223368_Category-Self-Relate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -84,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201502131842101_Basic DB.resx">
       <DependentUpon>201502131842101_Basic DB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502132223368_Category-Self-Relate.resx">
+      <DependentUpon>201502132223368_Category-Self-Relate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

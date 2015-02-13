@@ -11,8 +11,6 @@ using IT_Tests.Models;
 
 namespace IT_Tests.Web.Controllers
 {
-    //TODO: Handle Roles
-    [Authorize]
     public class CategoriesController : Controller
     {
         private ITTestsDbContext db = new ITTestsDbContext();
@@ -20,7 +18,8 @@ namespace IT_Tests.Web.Controllers
         // GET: Categories
         public ActionResult Index()
         {
-            return View(db.Categories.ToList());
+            var categories = db.Categories.Include(c => c.ParentCategory);
+            return View(categories.ToList());
         }
 
         // GET: Categories/Details/5
@@ -41,6 +40,7 @@ namespace IT_Tests.Web.Controllers
         // GET: Categories/Create
         public ActionResult Create()
         {
+            ViewBag.ParentCategoryId = new SelectList(db.Categories, "Id", "Name");
             return View();
         }
 
@@ -49,7 +49,7 @@ namespace IT_Tests.Web.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,ParentId")] Category category)
+        public ActionResult Create([Bind(Include = "Id,Name,ParentCategoryId")] Category category)
         {
             if (ModelState.IsValid)
             {
@@ -58,6 +58,7 @@ namespace IT_Tests.Web.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.ParentCategoryId = new SelectList(db.Categories, "Id", "Name", category.ParentCategoryId);
             return View(category);
         }
 
@@ -73,6 +74,7 @@ namespace IT_Tests.Web.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.ParentCategoryId = new SelectList(db.Categories, "Id", "Name", category.ParentCategoryId);
             return View(category);
         }
 
@@ -81,7 +83,7 @@ namespace IT_Tests.Web.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,ParentId")] Category category)
+        public ActionResult Edit([Bind(Include = "Id,Name,ParentCategoryId")] Category category)
         {
             if (ModelState.IsValid)
             {
@@ -89,6 +91,7 @@ namespace IT_Tests.Web.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.ParentCategoryId = new SelectList(db.Categories, "Id", "Name", category.ParentCategoryId);
             return View(category);
         }
 

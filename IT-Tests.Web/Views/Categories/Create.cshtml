@@ -4,7 +4,7 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Category Create</h2>
+<h2>Create</h2>
 
 @using (Html.BeginForm()) 
 {
@@ -23,10 +23,10 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ParentId, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.ParentCategoryId, "Parent Category", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.ParentId, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ParentId, "", new { @class = "text-danger" })
+                @Html.DropDownList("ParentCategoryId", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ParentCategoryId, "", new { @class = "text-danger" })
             </div>
         </div>
 
