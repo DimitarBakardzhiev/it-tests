@@ -69,6 +69,10 @@
     <Compile Include="Migrations\201502132223368_Category-Self-Relate.Designer.cs">
       <DependentUpon>201502132223368_Category-Self-Relate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201502141257276_Core DB Updates.cs" />
+    <Compile Include="Migrations\201502141257276_Core DB Updates.Designer.cs">
+      <DependentUpon>201502141257276_Core DB Updates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -91,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201502132223368_Category-Self-Relate.resx">
       <DependentUpon>201502132223368_Category-Self-Relate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502141257276_Core DB Updates.resx">
+      <DependentUpon>201502141257276_Core DB Updates.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,19 +1,22 @@
 ﻿namespace IT_Tests.Models
 {
+    using IT_Tests.Enumerations;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
     public class Question
     {
-        public Question() 
+        public Question()
         {
             this.Answers = new HashSet<Answer>();
         }
 
         public int Id { get; set; }
 
-        [Display(Name="Question Text")]
+        [Display(Name = "Question Text")]
         public string Text { get; set; }
+
+        public QuestionDifficulty Difficulty { get; set; }
 
         public int CategoryId { get; set; }
 

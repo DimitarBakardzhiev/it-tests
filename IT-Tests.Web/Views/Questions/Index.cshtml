@@ -18,6 +18,9 @@
             Answers
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Difficulty)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Category.Name)
         </th>
         <th>
@@ -34,6 +37,9 @@
             {
                 <p>@Html.DisplayFor(a => answer.Text)</p>
             }
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Difficulty)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Category.Name)

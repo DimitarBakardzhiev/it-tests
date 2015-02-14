@@ -49,7 +49,7 @@ namespace IT_Tests.Web.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,ParentCategoryId")] Category category)
+        public ActionResult Create([Bind(Include = "Id,Name,ParentCategoryId,IsChoosable")] Category category)
         {
             if (ModelState.IsValid)
             {
@@ -83,7 +83,7 @@ namespace IT_Tests.Web.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,ParentCategoryId")] Category category)
+        public ActionResult Edit([Bind(Include = "Id,Name,ParentCategoryId,IsChoosable")] Category category)
         {
             if (ModelState.IsValid)
             {

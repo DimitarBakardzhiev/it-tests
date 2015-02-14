@@ -15,6 +15,8 @@
         [Display(Name="Category Name")]
         public string Name { get; set; }
 
+        public bool IsChoosable { get; set; }
+
         [Display(Name="Parent Category")]
         public int? ParentCategoryId { get; set; }
 
