@@ -18,5 +18,19 @@
 
             return View();
         }
+
+        [HttpGet]
+        public ActionResult Generate(int? categoryId) 
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Generate(IT_Tests.Web.ViewModels.TestOptionsViewModel model) 
+        {
+            //TODO: Handle redirect to taking test
+            return View();
+        }
     }
 }
