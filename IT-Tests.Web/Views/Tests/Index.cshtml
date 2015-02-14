@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Choose a test category</h2>
+@{
+    int counter = 0;
+}
+
+@foreach (var category in ViewBag.Categories) 
+{
+    <button class="btn btn-primary col-md-2" style="margin-right:2px; margin-bottom: 2px;">@category.Name</button>
+}

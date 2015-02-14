@@ -5,18 +5,16 @@
     using System.Linq;
     using System.Web;
     using System.Web.Mvc;
-    using IT_Tests.Data;
 
     [Authorize]
-    public class LadderController : Controller
+    public class TestsController : BaseController
     {
-        // GET: Ladder
+        // GET: Test
         public ActionResult Index()
         {
-            var db = new ITTestsData(new ITTestsDbContext());
+            var categories = Database.Categories.All().Where(c => c.IsChoosable == true).OrderBy(c => c.ParentCategory.Id);
 
-            var users = db.Users.All().ToList().OrderBy(u => u.Points);
-            ViewBag.Users = users;
+            ViewBag.Categories = categories;
 
             return View();
         }

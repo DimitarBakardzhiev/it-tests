@@ -15,7 +15,9 @@
                     <li class="">
                         @Html.ActionLink(" ", "Index", "Home", routeValues: null, htmlAttributes: new { @class = "icon-home" })
                     </li>
-                    <li><a href="#tests">Tests</a></li>
+                    <li>
+                        @Html.ActionLink("Tests", "Index", "Tests", routeValues: null, htmlAttributes: new { })
+                    </li>
                     <li><a href="#tutorials">Tutorials</a></li>
                     <li>
                         @Html.ActionLink("Ladder", "Index", "Ladder", routeValues: null, htmlAttributes: new { })
