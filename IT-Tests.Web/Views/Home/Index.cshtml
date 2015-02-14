@@ -8,14 +8,14 @@
             <div class="row">
                 <h1>Free IT Tests</h1>
                 <p class="lead">Check your knowledge with over 4000 questions on programming and IT related topics</p>
-                <button class="btn btn-lg btn-primary">See all tests</button>
+                @Html.ActionLink("See all tests", "Index", "Tests", routeValues: null, htmlAttributes: new { @class = "btn btn-lg btn-primary" })
             </div>
         </div>
         <div class="item">
             <div class="row">
                 <h1>Personal History</h1>
                 <p class="lead">Track your progress and climb up our ladder</p>
-                <button class="btn btn-lg btn-primary">View ladder</button>
+                @Html.ActionLink("View ladder", "Index", "Ladder", routeValues: null, htmlAttributes: new { @class = "btn btn-lg btn-primary" })
             </div>
         </div>
         <div class="item">
