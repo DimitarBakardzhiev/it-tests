@@ -13,14 +13,13 @@
 
     //TODO: Handle Roles
     [Authorize]
-    public class QuestionsController : Controller
+    public class QuestionsController : BaseController
     {
-        private ITTestsDbContext db = new ITTestsDbContext();
 
         // GET: Questions
         public ActionResult Index()
         {
-            var questions = db.Questions.Include(q => q.Category);
+            var questions = db.Questions.All().Include(q => q.Category);
 
             return View(questions.ToList());
         }
@@ -32,7 +31,7 @@
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Question question = db.Questions.Find(id);
+            Question question = db.Questions.GetById(id);
             if (question == null)
             {
                 return HttpNotFound();
@@ -43,7 +42,7 @@
         // GET: Questions/Create
         public ActionResult Create()
         {
-            ViewBag.CategoryId = new SelectList(db.Categories, "Id", "Name");
+            ViewBag.CategoryId = new SelectList(db.Categories.All(), "Id", "Name");
             return View();
         }
 
@@ -61,7 +60,7 @@
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CategoryId = new SelectList(db.Categories, "Id", "Name", question.CategoryId);
+            ViewBag.CategoryId = new SelectList(db.Categories.All(), "Id", "Name", question.CategoryId);
             return View(question);
         }
 
@@ -72,12 +71,12 @@
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Question question = db.Questions.Find(id);
+            Question question = db.Questions.GetById(id);
             if (question == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.CategoryId = new SelectList(db.Categories, "Id", "Name", question.CategoryId);
+            ViewBag.CategoryId = new SelectList(db.Categories.All(), "Id", "Name", question.CategoryId);
             return View(question);
         }
 
@@ -90,11 +89,11 @@
         {
             if (ModelState.IsValid)
             {
-                db.Entry(question).State = EntityState.Modified;
+                //db.Entry(question).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CategoryId = new SelectList(db.Categories, "Id", "Name", question.CategoryId);
+            ViewBag.CategoryId = new SelectList(db.Categories.All(), "Id", "Name", question.CategoryId);
             return View(question);
         }
 
@@ -105,7 +104,7 @@
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Question question = db.Questions.Find(id);
+            Question question = db.Questions.GetById(id);
             if (question == null)
             {
                 return HttpNotFound();
@@ -118,8 +117,8 @@
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Question question = db.Questions.Find(id);
-            db.Questions.Remove(question);
+            Question question = db.Questions.GetById(id);
+            db.Questions.Delete(question);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

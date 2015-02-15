@@ -8,14 +8,14 @@
     using IT_Tests.Data;
 
     [Authorize]
-    public class LadderController : Controller
+    public class LadderController : BaseController
     {
         // GET: Ladder
         public ActionResult Index()
         {
-            var db = new ITTestsData(new ITTestsDbContext());
 
             var users = db.Users.All().ToList().OrderBy(u => u.Points);
+
             ViewBag.Users = users;
 
             return View();

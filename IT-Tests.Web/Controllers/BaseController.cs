@@ -10,16 +10,16 @@
 
     public abstract class BaseController : Controller
     {
-        protected static IITTestsData Database;
+        protected static IITTestsData db;
 
         public BaseController()
         {
-            Database = new ITTestsData(new ITTestsDbContext());
+            db = new ITTestsData(new ITTestsDbContext());
         }
 
         protected override void Dispose(bool disposing)
         {
-            Database.Dispose();
+            db.Dispose();
             base.Dispose(disposing);
         }
     }

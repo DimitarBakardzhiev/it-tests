@@ -28,7 +28,7 @@ namespace IT_Tests.Data.Migrations
             //     new Person { FullName = "Rowan Miller" }
             //   );
             const string AdminRole = "Admin";
-            const string AdminUsername = "Stracmana@frontend.com";
+            const string AdminUsername = "admin@it-tests.net";
             const string AdminPassword = "biqsesloshite";
 
             context.Roles.AddOrUpdate(r => r.Name, new IdentityRole(AdminRole));

@@ -11,14 +11,13 @@ using IT_Tests.Models;
 
 namespace IT_Tests.Web.Controllers
 {
-    public class CategoriesController : Controller
+    public class CategoriesController : BaseController
     {
-        private ITTestsDbContext db = new ITTestsDbContext();
 
         // GET: Categories
         public ActionResult Index()
         {
-            var categories = db.Categories.Include(c => c.ParentCategory);
+            var categories = db.Categories.All().Include(c => c.ParentCategory);
             return View(categories.ToList());
         }
 
@@ -29,7 +28,7 @@ namespace IT_Tests.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Category category = db.Categories.Find(id);
+            Category category = db.Categories.GetById(id);
             if (category == null)
             {
                 return HttpNotFound();
@@ -40,7 +39,7 @@ namespace IT_Tests.Web.Controllers
         // GET: Categories/Create
         public ActionResult Create()
         {
-            ViewBag.ParentCategoryId = new SelectList(db.Categories, "Id", "Name");
+            ViewBag.ParentCategoryId = new SelectList(db.Categories.All(), "Id", "Name");
             return View();
         }
 
@@ -58,7 +57,7 @@ namespace IT_Tests.Web.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ParentCategoryId = new SelectList(db.Categories, "Id", "Name", category.ParentCategoryId);
+            ViewBag.ParentCategoryId = new SelectList(db.Categories.All(), "Id", "Name", category.ParentCategoryId);
             return View(category);
         }
 
@@ -69,12 +68,12 @@ namespace IT_Tests.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Category category = db.Categories.Find(id);
+            Category category = db.Categories.GetById(id);
             if (category == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.ParentCategoryId = new SelectList(db.Categories, "Id", "Name", category.ParentCategoryId);
+            ViewBag.ParentCategoryId = new SelectList(db.Categories.All(), "Id", "Name", category.ParentCategoryId);
             return View(category);
         }
 
@@ -87,11 +86,11 @@ namespace IT_Tests.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(category).State = EntityState.Modified;
+                //db.Entry(category).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ParentCategoryId = new SelectList(db.Categories, "Id", "Name", category.ParentCategoryId);
+            ViewBag.ParentCategoryId = new SelectList(db.Categories.All(), "Id", "Name", category.ParentCategoryId);
             return View(category);
         }
 
@@ -102,7 +101,7 @@ namespace IT_Tests.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Category category = db.Categories.Find(id);
+            Category category = db.Categories.GetById(id);
             if (category == null)
             {
                 return HttpNotFound();
@@ -115,8 +114,8 @@ namespace IT_Tests.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Category category = db.Categories.Find(id);
-            db.Categories.Remove(category);
+            Category category = db.Categories.GetById(id);
+            db.Categories.Delete(category);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

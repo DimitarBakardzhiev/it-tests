@@ -12,7 +12,7 @@
         // GET: Test
         public ActionResult Index()
         {
-            var categories = Database.Categories.All().Where(c => c.IsChoosable == true).OrderBy(c => c.ParentCategory.Id);
+            var categories = db.Categories.All().Where(c => c.IsChoosable == true).OrderBy(c => c.ParentCategory.Id);
 
             ViewBag.Categories = categories;
 

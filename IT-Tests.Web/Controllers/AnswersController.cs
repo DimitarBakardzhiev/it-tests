@@ -13,14 +13,13 @@
 
     //TODO: Handle Roles
     [Authorize]
-    public class AnswersController : Controller
+    public class AnswersController : BaseController
     {
-        private ITTestsDbContext db = new ITTestsDbContext();
 
         // GET: Answers
         public ActionResult Index()
         {
-            var answers = db.Answers.Include(a => a.Question);
+            var answers = db.Answers.All().Include(a => a.Question);
             return View(answers.ToList());
         }
 
@@ -31,7 +30,7 @@
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Answer answer = db.Answers.Find(id);
+            Answer answer = db.Answers.GetById(id);
             if (answer == null)
             {
                 return HttpNotFound();
@@ -42,7 +41,7 @@
         // GET: Answers/Create
         public ActionResult Create()
         {
-            ViewBag.QuestionId = new SelectList(db.Questions, "Id", "Text");
+            ViewBag.QuestionId = new SelectList(db.Questions.All(), "Id", "Text");
             return View();
         }
 
@@ -60,7 +59,7 @@
                 return RedirectToAction("Index");
             }
 
-            ViewBag.QuestionId = new SelectList(db.Questions, "Id", "Text", answer.QuestionId);
+            ViewBag.QuestionId = new SelectList(db.Questions.All(), "Id", "Text", answer.QuestionId);
             return View(answer);
         }
 
@@ -71,12 +70,12 @@
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Answer answer = db.Answers.Find(id);
+            Answer answer = db.Answers.GetById(id);
             if (answer == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.QuestionId = new SelectList(db.Questions, "Id", "Text", answer.QuestionId);
+            ViewBag.QuestionId = new SelectList(db.Questions.All(), "Id", "Text", answer.QuestionId);
             return View(answer);
         }
 
@@ -89,11 +88,11 @@
         {
             if (ModelState.IsValid)
             {
-                db.Entry(answer).State = EntityState.Modified;
+                //db.Entry(answer).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.QuestionId = new SelectList(db.Questions, "Id", "Text", answer.QuestionId);
+            ViewBag.QuestionId = new SelectList(db.Questions.All(), "Id", "Text", answer.QuestionId);
             return View(answer);
         }
 
@@ -104,7 +103,7 @@
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Answer answer = db.Answers.Find(id);
+            Answer answer = db.Answers.GetById(id);
             if (answer == null)
             {
                 return HttpNotFound();
@@ -117,8 +116,8 @@
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Answer answer = db.Answers.Find(id);
-            db.Answers.Remove(answer);
+            Answer answer = db.Answers.GetById(id);
+            db.Answers.Delete(answer);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
