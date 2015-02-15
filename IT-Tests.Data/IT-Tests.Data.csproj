@@ -53,8 +53,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GenericRepository.cs" />
-    <Compile Include="IITTestsData.cs" />
-    <Compile Include="IRepository.cs" />
+    <Compile Include="Interfaces\IITTestsData.cs" />
+    <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="ITTestsData.cs" />
     <Compile Include="ITTestsDbContext.cs" />
     <Compile Include="Migrations\Configuration.cs" />

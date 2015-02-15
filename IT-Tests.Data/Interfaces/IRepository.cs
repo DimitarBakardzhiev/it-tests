@@ -1,4 +1,4 @@
-﻿namespace IT_Tests.Data
+﻿namespace IT_Tests.Data.Interfaces
 {
     using System.Linq;
 

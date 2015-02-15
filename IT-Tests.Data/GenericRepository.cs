@@ -5,6 +5,8 @@
     using System.Data.Entity.Infrastructure;
     using System.Linq;
 
+    using IT_Tests.Data.Interfaces;
+
     public class GenericRepository<T> : IRepository<T> where T : class
     {
         public GenericRepository(DbContext context)

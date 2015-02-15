@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Data.Entity;
 
+    using IT_Tests.Data.Interfaces;
     using IT_Tests.Models;
 
     public class ITTestsData: IITTestsData
