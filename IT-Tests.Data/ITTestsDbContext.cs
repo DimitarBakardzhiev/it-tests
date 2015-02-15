@@ -16,7 +16,6 @@
         }
 
         // IDbSet...
-
         public static ITTestsDbContext Create()
         {
             return new ITTestsDbContext();

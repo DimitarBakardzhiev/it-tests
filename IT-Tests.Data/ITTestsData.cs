@@ -7,7 +7,7 @@
     using IT_Tests.Data.Interfaces;
     using IT_Tests.Models;
 
-    public class ITTestsData: IITTestsData
+    public class ITTestsData : IITTestsData
     {
         private readonly DbContext context;
 
