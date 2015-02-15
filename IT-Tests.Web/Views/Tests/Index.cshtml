@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-2">
+        <hr />
+
+        @foreach (var category in ViewBag.Categories as IEnumerable<IT_Tests.Models.Category>)
+        {
+            @Html.ActionLink(category.Name, "Generate", "Tests",new {
+                categoryId = @category.Id
+            }, new 
+            {
+                @class = "btn btn-primary col-md-2",
+                style = "margin-right:2px; margin-bottom: 2px;"
+            })
+        }
+
+    </div>
+</div>
+<hr />
+    

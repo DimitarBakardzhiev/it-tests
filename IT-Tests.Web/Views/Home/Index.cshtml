@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Home";
 }
 
 <section id="main-slider" class="carousel">
@@ -8,21 +8,21 @@
             <div class="row">
                 <h1>Free IT Tests</h1>
                 <p class="lead">Check your knowledge with over 4000 questions on programming and IT related topics</p>
-                <button class="btn-lg btn-default">See all tests</button>
+                @Html.ActionLink("See all tests", "Index", "Tests", routeValues: null, htmlAttributes: new { @class = "btn btn-lg btn-primary" })
             </div>
         </div>
         <div class="item">
             <div class="row">
                 <h1>Personal History</h1>
                 <p class="lead">Track your progress and climb up our ladder</p>
-                <button class="btn-lg btn-default">View ladder</button>
+                @Html.ActionLink("View ladder", "Index", "Ladder", routeValues: null, htmlAttributes: new { @class = "btn btn-lg btn-primary" })
             </div>
         </div>
         <div class="item">
             <div class="row">
                 <h1>Contribute</h1>
                 <p class="lead">You can help us by submitting new IT questions or even whole tests!</p>
-                <button class="btn-lg btn-default">Submit a question</button>
+                <button class="btn btn-lg btn-primary">Submit a question</button>
             </div>
         </div>
     </div>
@@ -39,10 +39,10 @@
                         <i class="icon-windows icon-md icon-color3"></i>
                         <h4>.NET development</h4>
                         <p>Developing for .NET? This is your category.</p>
-                        <button class="btn-primary">C#</button>
-                        <button class="btn-primary">ASP.NET</button>
-                        <button class="btn-primary">Windows Forms</button>
-                        <button class="btn-primary">WPF</button>
+                        <button class="btn btn-primary">C#</button>
+                        <button class="btn btn-primary">ASP.NET</button>
+                        <button class="btn btn-primary">Windows Forms</button>
+                        <button class="btn btn-primary">WPF</button>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
@@ -50,8 +50,8 @@
                         <i class="icon-android icon-md icon-color3"></i>
                         <h4>Java and Android</h4>
                         <p>Over 1000 Java and Android Development questions.</p>
-                        <button class="btn-primary">Java</button>
-                        <button class="btn-primary">Android</button>
+                        <button class="btn btn-primary">Java</button>
+                        <button class="btn btn-primary">Android</button>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
@@ -59,8 +59,8 @@
                         <i class="icon-apple icon-md icon-color3"></i>
                         <h4>iOS</h4>
                         <p>Check your knowledge on developing for IOS.</p>
-                        <button class="btn-primary">iOS</button>
-                        <button class="btn-primary">Objective-C</button>
+                        <button class="btn btn-primary">iOS</button>
+                        <button class="btn btn-primary">Objective-C</button>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
@@ -68,9 +68,9 @@
                         <i class="icon-html5 icon-md icon-color6"></i>
                         <h4>Web technologies</h4>
                         <p>Test your HTML5 / CSS3 and Javascript knowledge.</p>
-                        <button class="btn-warning">HTML5</button>
-                        <button class="btn-warning">CSS3</button>
-                        <button class="btn-warning">Javascript</button>
+                        <button class="btn btn-warning">HTML5</button>
+                        <button class="btn btn-warning">CSS3</button>
+                        <button class="btn btn-warning">Javascript</button>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
@@ -78,9 +78,9 @@
                         <i class="icon-linux icon-md icon-color6"></i>
                         <h4>Scripting Languages</h4>
                         <p>If you love scripting languages - this is your place.</p>
-                        <button class="btn-warning">PHP</button>
-                        <button class="btn-warning">Ruby/On Rails</button>
-                        <button class="btn-warning">Python/Django</button>
+                        <button class="btn btn-warning">PHP</button>
+                        <button class="btn btn-warning">Ruby/On Rails</button>
+                        <button class="btn btn-warning">Python/Django</button>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
@@ -88,14 +88,14 @@
                         <i class="icon-desktop icon-md icon-color6"></i>
                         <h4>Common IT Tests</h4>
                         <p>Check your widespread IT Knowledge!.</p>
-                        <button class="btn-warning">IT Basics</button>
-                        <button class="btn-warning">Informatics Theory</button>
-                        <button class="btn-warning">Hardware</button>
+                        <button class="btn btn-warning">IT Basics</button>
+                        <button class="btn btn-warning">Informatics Theory</button>
+                        <button class="btn btn-warning">Hardware</button>
                     </div>
                 </div>
-                <center>
-                    <h4>Can't find your desired language or technology?<a href="#tests"> <span> Check all tests</span></a>!</h4>
-                </center>
+                <div class="center">
+                    <h4>Can't find your desired language or technology?<a href="#tests"> @Html.ActionLink("Check all tests!", "Index", "Tests", routeValues:null, htmlAttributes: new {})</h4>
+                </div>
             </div>
         </div>
     </div>

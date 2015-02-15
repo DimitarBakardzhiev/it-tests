@@ -16,6 +16,12 @@
         }
 
         // IDbSet...
+        public virtual IDbSet<Answer> Answers { get; set; }
+
+        public virtual IDbSet<Category> Categories { get; set; }
+
+        public virtual IDbSet<Question> Questions { get; set; }
+
         public static ITTestsDbContext Create()
         {
             return new ITTestsDbContext();

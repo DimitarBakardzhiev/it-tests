@@ -18,6 +18,31 @@
             this.context = context;
         }
 
+        public IRepository<Answer> Answers 
+        {
+            get 
+            {
+                return this.GetRepository<Answer>();
+            }
+        }
+
+        public IRepository<Category> Categories
+        {
+            get
+            {
+                return this.GetRepository<Category>();
+            }
+        }
+
+        public IRepository<Question> Questions 
+        {
+            get 
+            {
+                return this.GetRepository<Question>();
+            }
+        }
+
+
         public IRepository<User> Users
         {
             get
@@ -26,6 +51,7 @@
             }
         }
 
+    
         public DbContext Context
         {
             get

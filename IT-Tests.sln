@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IT-Tests.Models", "IT-Tests
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IT-Tests.Data", "IT-Tests.Data\IT-Tests.Data.csproj", "{2CEA311E-7112-4A0D-A911-B782FEFB64EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IT-Tests.Enumerations", "IT-Tests.Enumerations\IT-Tests.Enumerations.csproj", "{0736FF50-A3A9-4677-A04B-AB8111CAE076}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2CEA311E-7112-4A0D-A911-B782FEFB64EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CEA311E-7112-4A0D-A911-B782FEFB64EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CEA311E-7112-4A0D-A911-B782FEFB64EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0736FF50-A3A9-4677-A04B-AB8111CAE076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0736FF50-A3A9-4677-A04B-AB8111CAE076}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0736FF50-A3A9-4677-A04B-AB8111CAE076}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0736FF50-A3A9-4677-A04B-AB8111CAE076}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

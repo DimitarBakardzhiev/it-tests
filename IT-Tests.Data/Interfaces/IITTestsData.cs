@@ -8,6 +8,12 @@
     {
         DbContext Context { get; }
 
+        IRepository<Answer> Answers { get; }
+
+        IRepository<Category> Categories { get; }
+
+        IRepository<Question> Questions { get; }
+
         IRepository<User> Users { get; }
 
         void Dispose();

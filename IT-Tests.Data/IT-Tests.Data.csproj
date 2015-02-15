@@ -57,6 +57,22 @@
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="ITTestsData.cs" />
     <Compile Include="ITTestsDbContext.cs" />
+    <Compile Include="Migrations\201502121518499_FirstName.cs" />
+    <Compile Include="Migrations\201502121518499_FirstName.Designer.cs">
+      <DependentUpon>201502121518499_FirstName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502131842101_Basic DB.cs" />
+    <Compile Include="Migrations\201502131842101_Basic DB.Designer.cs">
+      <DependentUpon>201502131842101_Basic DB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502132223368_Category-Self-Relate.cs" />
+    <Compile Include="Migrations\201502132223368_Category-Self-Relate.Designer.cs">
+      <DependentUpon>201502132223368_Category-Self-Relate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502141257276_Core DB Updates.cs" />
+    <Compile Include="Migrations\201502141257276_Core DB Updates.Designer.cs">
+      <DependentUpon>201502141257276_Core DB Updates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -69,6 +85,20 @@
       <Project>{269d5d31-dde6-4ff3-83aa-a45f048b2194}</Project>
       <Name>IT-Tests.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201502121518499_FirstName.resx">
+      <DependentUpon>201502121518499_FirstName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502131842101_Basic DB.resx">
+      <DependentUpon>201502131842101_Basic DB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502132223368_Category-Self-Relate.resx">
+      <DependentUpon>201502132223368_Category-Self-Relate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502141257276_Core DB Updates.resx">
+      <DependentUpon>201502141257276_Core DB Updates.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

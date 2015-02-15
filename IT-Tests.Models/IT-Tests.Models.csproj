@@ -52,12 +52,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Answer.cs" />
+    <Compile Include="Category.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Question.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IT-Tests.Enumerations\IT-Tests.Enumerations.csproj">
+      <Project>{0736ff50-a3a9-4677-a04b-ab8111cae076}</Project>
+      <Name>IT-Tests.Enumerations</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
