@@ -40,18 +40,17 @@ namespace IT_Tests.Data.Migrations
                         ParentId = c.Int(),
                     })
                 .PrimaryKey(t => t.Id);
-            
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Questions", "CategoryId", "dbo.Categories");
-            DropForeignKey("dbo.Answers", "QuestionId", "dbo.Questions");
-            DropIndex("dbo.Questions", new[] { "CategoryId" });
-            DropIndex("dbo.Answers", new[] { "QuestionId" });
-            DropTable("dbo.Categories");
-            DropTable("dbo.Questions");
-            DropTable("dbo.Answers");
+            this.DropForeignKey("dbo.Questions", "CategoryId", "dbo.Categories");
+            this.DropForeignKey("dbo.Answers", "QuestionId", "dbo.Questions");
+            this.DropIndex("dbo.Questions", new[] { "CategoryId" });
+            this.DropIndex("dbo.Answers", new[] { "QuestionId" });
+            this.DropTable("dbo.Categories");
+            this.DropTable("dbo.Questions");
+            this.DropTable("dbo.Answers");
         }
     }
 }

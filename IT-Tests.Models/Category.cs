@@ -12,12 +12,12 @@
 
         public int Id { get; set; }
 
-        [Display(Name="Category Name")]
+        [Display(Name = "Category Name")]
         public string Name { get; set; }
 
         public bool IsChoosable { get; set; }
 
-        [Display(Name="Parent Category")]
+        [Display(Name = "Parent Category")]
         public int? ParentCategoryId { get; set; }
 
         public virtual Category ParentCategory { get; set; }

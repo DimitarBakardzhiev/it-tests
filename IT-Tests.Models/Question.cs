@@ -1,8 +1,9 @@
 ﻿namespace IT_Tests.Models
 {
-    using IT_Tests.Enumerations;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+
+    using IT_Tests.Enumerations;
 
     public class Question
     {

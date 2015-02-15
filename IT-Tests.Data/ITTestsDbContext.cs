@@ -15,7 +15,6 @@
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<ITTestsDbContext, Configuration>());
         }
 
-        // IDbSet...
         public virtual IDbSet<Answer> Answers { get; set; }
 
         public virtual IDbSet<Category> Categories { get; set; }

@@ -1,8 +1,13 @@
 namespace IT_Tests.Data.Migrations
 {
     using System.Data.Entity.Migrations;
+    using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<ITTestsDbContext>
+    using IT_Tests.Models;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
+
+    public sealed class Configuration : DbMigrationsConfiguration<ITTestsDbContext>
     {
         public Configuration()
         {
@@ -22,6 +27,22 @@ namespace IT_Tests.Data.Migrations
             //     new Person { FullName = "Brice Lambson" },
             //     new Person { FullName = "Rowan Miller" }
             //   );
+            const string AdminRole = "Admin";
+            const string AdminUsername = "Stracmana@frontend.com";
+            const string AdminPassword = "biqsesloshite";
+
+            context.Roles.AddOrUpdate(r => r.Name, new IdentityRole(AdminRole));
+
+            if (!context.Users.Any(u => u.UserName == AdminUsername))
+            {
+                var store = new UserStore<User>(context);
+                var manager = new UserManager<User>(store);
+                var user = new User { UserName = AdminUsername, Email = AdminUsername, Points = 0 };
+
+                manager.Create(user, AdminPassword);
+                manager.AddToRole(user.Id, AdminRole);
+                context.SaveChanges();
+            }
         }
     }
 }

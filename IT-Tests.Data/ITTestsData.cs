@@ -42,7 +42,6 @@
             }
         }
 
-
         public IRepository<User> Users
         {
             get
@@ -51,7 +50,6 @@
             }
         }
 
-    
         public DbContext Context
         {
             get

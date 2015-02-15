@@ -7,16 +7,16 @@ namespace IT_Tests.Data.Migrations
     {
         public override void Up()
         {
-            AddColumn("dbo.Questions", "Difficulty", c => c.Int(nullable: false));
-            AddColumn("dbo.Categories", "IsChoosable", c => c.Boolean(nullable: false));
-            AddColumn("dbo.AspNetUsers", "Points", c => c.Int(nullable: false));
+            this.AddColumn("dbo.Questions", "Difficulty", c => c.Int(nullable: false));
+            this.AddColumn("dbo.Categories", "IsChoosable", c => c.Boolean(nullable: false));
+            this.AddColumn("dbo.AspNetUsers", "Points", c => c.Int(nullable: false));
         }
         
         public override void Down()
         {
-            DropColumn("dbo.AspNetUsers", "Points");
-            DropColumn("dbo.Categories", "IsChoosable");
-            DropColumn("dbo.Questions", "Difficulty");
+            this.DropColumn("dbo.AspNetUsers", "Points");
+            this.DropColumn("dbo.Categories", "IsChoosable");
+            this.DropColumn("dbo.Questions", "Difficulty");
         }
     }
 }
