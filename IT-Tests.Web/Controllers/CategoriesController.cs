@@ -11,6 +11,7 @@ using IT_Tests.Models;
 
 namespace IT_Tests.Web.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class CategoriesController : BaseController
     {
 

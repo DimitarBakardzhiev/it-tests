@@ -11,8 +11,7 @@
     using IT_Tests.Data;
     using IT_Tests.Models;
 
-    //TODO: Handle Roles
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class AnswersController : BaseController
     {
 
