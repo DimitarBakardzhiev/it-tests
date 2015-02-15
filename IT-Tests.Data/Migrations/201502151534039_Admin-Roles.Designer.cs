@@ -7,13 +7,13 @@ namespace IT_Tests.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class CategorySelfRelate : IMigrationMetadata
+    public sealed partial class AdminRoles : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CategorySelfRelate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AdminRoles));
         
         string IMigrationMetadata.Id
         {
-            get { return "201502132223368_Category-Self-Relate"; }
+            get { return "201502151534039_Admin-Roles"; }
         }
         
         string IMigrationMetadata.Source

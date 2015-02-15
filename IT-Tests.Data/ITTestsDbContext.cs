@@ -2,17 +2,18 @@
 {
     using System.Data.Entity;
 
-    using IT_Tests.Data.Migrations;
+    //using IT_Tests.Data.Migrations;
     using IT_Tests.Models;
 
     using Microsoft.AspNet.Identity.EntityFramework;
+    using IT_Tests.Data.Migrations;
 
     public class ITTestsDbContext : IdentityDbContext<User>
     {
         public ITTestsDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<ITTestsDbContext, Configuration>());
+          Database.SetInitializer(new MigrateDatabaseToLatestVersion<ITTestsDbContext, Configuration>());
         }
 
         public virtual IDbSet<Answer> Answers { get; set; }
